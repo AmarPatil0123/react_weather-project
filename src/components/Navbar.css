@@ -28,9 +28,15 @@ input[type="text"]{
     margin-right: .5rem;
 }
 
+
 .hamburger{
     display: none;
     font-size: 2rem;
+}
+
+.toastMsg{
+    z-index: 101;
+    margin-top: 60px;
 }
 
 .search.toggle{
@@ -74,6 +80,10 @@ input[type="text"]{
         display: block;
         margin-bottom: 1rem;
         outline: none;
+    }
+
+    .toastMsg {
+        width: 250px !important; 
     }
 }
 

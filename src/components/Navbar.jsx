@@ -52,6 +52,7 @@ export const Navbar = ({setWeatherData}) => {
         }catch(err){
             if(!navigator.onLine){
                 toast.error("You are offline");
+                toggleNavbar();
                 return ;
             }
             toast.error("Not found the details");
@@ -67,7 +68,7 @@ export const Navbar = ({setWeatherData}) => {
             <form action="" className={`search ${ toggle ? 'toggle' : ''}`} onSubmit={handleSubmit}>
                 <input type="text" placeholder='Search City' value={city} onChange={handleOnChange} required/>
                 <Button variant="contained" color="success" size="large" type='submit' >Search</Button>
-                <ToastContainer position="top-right" autoClose={3000} pauseOnHover={false} style={{ marginTop: "60px" }} />
+                <ToastContainer position="top-right" className="toastMsg" autoClose={3000} pauseOnHover={false} />
             </form>
            
             <i className={`fa-solid fa-bars hamburger ${ toggle ? 'fa-solid fa-xmark' : ''}`} onClick={toggleNavbar}></i>
