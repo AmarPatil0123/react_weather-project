@@ -1,0 +1,126 @@
+html,
+body {
+    width: 100vw;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+
+}
+
+.WeatherData {
+    position: relative;
+    height: 90vh;
+    overflow: hidden;
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+}
+
+.video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.city {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: orangered;
+    backdrop-filter: blur(10px);
+}
+
+.data {
+    position: absolute;
+    width: 400px;
+    height: auto;
+    top: 10%;
+    right: 5%;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    color: #333;
+    padding: 1rem;
+    text-align: center;
+}
+
+.data h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #222;
+    font-weight: bold;
+}
+
+.details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 1.5rem;
+}
+
+.details div {
+    width: 160px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.details div:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.details h4 {
+    font-size: 0.9rem;
+    margin: 0;
+    color: #444;
+}
+
+.details h5 {
+    font-size: 1.1rem;
+    margin: 0;
+    color: #333;
+}
+
+
+@media (max-width :448px) {
+
+    .WeatherData {
+        overflow: auto;
+    }
+
+    .data {
+        width: 20rem;
+        padding-top: 1rem;
+        right: 3%;
+    }
+
+    .details {
+        justify-content: space-evenly;
+    }
+
+    .details div {
+        width: 130px;
+        height: 65px;
+    }
+}
